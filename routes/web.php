@@ -15,5 +15,5 @@ Route::get('/', function(){
 
 // --ROUTE DASHBOARD--
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::resource('admn/mitra',MitraController::class)-> middleware('auth');
+Route::resource('admn/mitra',MitraController::class)-> middleware('auth')->names('mitra');
 
